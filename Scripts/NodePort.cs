@@ -25,11 +25,11 @@ namespace XNode {
         }
         public Node.ConnectionType connectionType {
             get { return _connectionType; }
-            internal set { _connectionType = value; }
+            set { _connectionType = value; }
         }
         public Node.TypeConstraint typeConstraint {
             get { return _typeConstraint; }
-            internal set { _typeConstraint = value; }
+            set { _typeConstraint = value; }
         }
 
         /// <summary> Is this port connected to anytihng? </summary>
