@@ -287,7 +287,14 @@ namespace XNodeEditor {
                             } else if (IsHoveringReroute) {
                                 ShowRerouteContextMenu(hoveredReroute);
                             } else if (IsHoveringPort) {
-                                ShowPortContextMenu(hoveredPort);
+                                if (e.button == 2)
+                                {
+									hoveredPort.ClearConnections();
+                                }
+                                else
+                                {
+                                    ShowPortContextMenu(hoveredPort);
+                                }
                             } else if (IsHoveringNode && IsHoveringTitle(hoveredNode)) {
                                 if (!Selection.Contains(hoveredNode)) SelectNode(hoveredNode, false);
                                 autoConnectOutput = null;
